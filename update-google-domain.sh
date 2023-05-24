@@ -17,7 +17,7 @@ fi
 ### Google Dynamic DNS: https://support.google.com/domains/answer/6147083
 ### Synthetic Records: https://support.google.com/domains/answer/6069273
 
-source ./.credentials.sh
+source ./dont-save/.credentials.sh
 
 if [ -z "${USERNAME}" ]
 then
