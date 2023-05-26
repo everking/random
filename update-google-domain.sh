@@ -2,7 +2,7 @@ echo "Update Google Domain"
 echo
 if [ -z "${IP}" ]
 then
-    echo "NO IP set"
+    echo "NO IP set. IP will be set based on IP address of the server hitting the Google API."
 else
     export IP_PARAM="&myip=${IP}"
     echo "IP set to ${IP}."
@@ -44,7 +44,7 @@ echo "${HOSTNAME} ==> ${IP}"
 echo
 # Update Google DNS Record
 URL="https://${USERNAME}:${PASSWORD}@domains.google.com/nic/update?hostname=${HOSTNAME}${IP_PARAM}"
-curl -s $URL -v
+curl -s $URL
 echo
 echo "done."
 echo
