@@ -1,0 +1,11 @@
+openssl req \
+-x509 \
+-newkey rsa:4096 \
+-sha256 \
+-days 3560 \
+-nodes \
+-keyout rancher-key.pem \
+-out rancher-pub.pem \
+-subj '/CN=m634.dev/O=DG/OU=DGBoys' \
+-extensions san \
+-config san-config

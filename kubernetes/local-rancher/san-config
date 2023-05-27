@@ -1,0 +1,5 @@
+[req]
+distinguished_name=req
+
+[san]
+subjectAltName=DNS:localhost,DNS:*.m634.dev,DNS:m634,DNS:m634.net,DNS:m634.org,DNS:m634.info
