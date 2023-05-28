@@ -5,9 +5,9 @@ if [ ! -d ${DATA_FOLDER} ]
 then
   mkdir -p ${DATA_FOLDER}
   sudo chown root:root ${DATA_FOLDER}
-  touch ${DATA_FOLDER}/sample-data.txt
+  sudo touch ${DATA_FOLDER}/sample-data.txt
   echo "Created folder ${DATA_FOLDER}."
-  ls -ltrh ${DATA_FOLDER}
+  sudo ls -ltrh ${DATA_FOLDER}
 else
   echo "${DATA_FOLDER} already exists."
 fi
