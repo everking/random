@@ -1,0 +1,18 @@
+body {
+    font-family: 'Kanit', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+h3 {
+    text-align: center;
+    font-style: italic;
+    font-weight: 100;
+}
+
+#main {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
