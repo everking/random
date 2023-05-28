@@ -1,10 +1,10 @@
 docker run -d \
   --name local-rancher \
   --restart=unless-stopped \
-  -p 80:80 -p 443:443 \
+  -p 8080:80 -p 8443:443 \
   -v /opt/rancher:/var/lib/rancher \
-  -v ${PWD}/rancher-pub.pem:/etc/rancher/ssl/cert.pem \
-  -v ${PWD}/rancher-key.pem:/etc/rancher/ssl/key.pem \
-  -v ${PWD}/rancher-pub.pem:/etc/rancher/ssl/cacerts.pem \
+  -v ${HOME}/dev/rancher/rancher-pub.pem:/etc/rancher/ssl/cert.pem \
+  -v ${HOME}/dev/rancher/rancher-key.pem:/etc/rancher/ssl/key.pem \
+  -v ${HOME}/dev/rancher/rancher-pub.pem:/etc/rancher/ssl/cacerts.pem \
   --privileged \
   rancher/rancher:latest

@@ -1,0 +1,14 @@
+version: '2'
+services:
+ app:
+  image: nginx
+  volumes:
+    - .:/usr/share/nginx/html
+    - ./default.conf:/etc/nginx/conf.d/default.conf
+    - ./backend-not-found.html:/var/www/html/backend-not-found.html
+    - ${HOME}/dev/rancher/rancher-key.pem:/etc/ssl/certs/nginx/server.key
+    - ${HOME}/dev/rancher/rancher-pub.pem:/etc/ssl/certs/nginx/server.crt
+  ports:
+   - "8080:80"
+   - "8443:443"
+   
