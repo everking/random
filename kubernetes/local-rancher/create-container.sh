@@ -1,7 +1,7 @@
 
 export DATA_FOLDER="${HOME}/rancher-data"
 
-[ ! -d ${DATA_FOLDER} ]
+if [ ! -d ${DATA_FOLDER} ]
 then
   mkdir -p ${DATA_FOLDER}
   sudo chown root:root ${DATA_FOLDER}
