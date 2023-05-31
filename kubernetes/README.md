@@ -19,3 +19,7 @@ route ADD [minikube_subnet] MASK [subnet_mask] [vmware_nic_ipaddress]
 
 # Replace docker altogether
 [Goodbye Docker Desktop, Hello Minikube!](https://itnext.io/goodbye-docker-desktop-hello-minikube-3649f2a1c469)
+
+
+# Logging
+* https://kubernetes.io/docs/concepts/cluster-administration/logging/#cluster-level-logging-architectures
