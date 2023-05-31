@@ -3,16 +3,12 @@ services:
   app:
     image: nginx
     volumes:
-      - .:/usr/share/nginx/html:ro
+      - ./content:/usr/share/nginx/html:ro
       - ./nginx/conf/:/etc/nginx/conf.d/:ro
       - ./certbot/www:/var/www/certbot/:ro
       - ./backend-not-found.html:/var/www/html/backend-not-found.html
-      - ./content/images/:/var/www/html/images/:ro
-      - ./content/images/favicon.ico:/var/www/html/favicon.ico:ro
-      - ${HOME}/dev/random/home/certbot/conf/live/m634.dev/privkey.pem:/etc/ssl/certs/nginx/server.key
-      - ${HOME}/dev/random/home/certbot/conf/live/m634.dev/fullchain.pem:/etc/ssl/certs/nginx/server.crt
-      - ${HOME}/dev/rancher/rancher-pub.pem:/etc/ssl/certs/nginx/local-server.crt
-      - ${HOME}/dev/rancher/rancher-key.pem:/etc/ssl/certs/nginx/local-server.key
+      - ${HOME}/dev/random/home/certbot/conf/archive/m634.dev/privkey3.pem:/etc/ssl/certs/nginx/server.key
+      - ${HOME}/dev/random/home/certbot/conf/archive/m634.dev/fullchain3.pem:/etc/ssl/certs/nginx/server.crt
     ports:
       - "80:80"
       - "443:443"
