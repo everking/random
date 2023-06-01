@@ -9,3 +9,5 @@ docker compose run --rm  certbot certonly \
   -d local-argocd.m634.dev \
   -d local-rancher.m634.dev \
   -v
+
+# https://community.letsencrypt.org/t/getting-wildcard-certificates-with-certbot/56285
