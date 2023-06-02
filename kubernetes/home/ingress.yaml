@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: home
+  namespace: home
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - m634.dev
+    secretName: home-cert
+  rules:
+  - host: "m634.dev"
+    http:
+      paths:
+        - pathType: Prefix
+          path: "/"
+          backend:
+            service:
+              name: home
+              port:
+                number: 80
