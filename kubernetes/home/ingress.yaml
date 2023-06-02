@@ -7,10 +7,10 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-    - m634.dev
+    - local.m634.dev
     secretName: home-cert
   rules:
-  - host: "m634.dev"
+  - host: "local.m634.dev"
     http:
       paths:
         - pathType: Prefix

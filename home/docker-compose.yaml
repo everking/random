@@ -10,8 +10,8 @@ services:
       - ${HOME}/dev/random/home/certbot/conf/archive/m634.dev/privkey3.pem:/etc/ssl/certs/nginx/server.key
       - ${HOME}/dev/random/home/certbot/conf/archive/m634.dev/fullchain3.pem:/etc/ssl/certs/nginx/server.crt
     ports:
-      - "7080:80"
-      - "7443:443"
+      - "80:80"
+      - "443:443"
   certbot:
     image: certbot/certbot:latest
     volumes:
